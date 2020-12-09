@@ -1,0 +1,11 @@
+---
+name: docker-images
+
+dependencies: []
+
+files:
+- docker-images/paasta-jenkins.tar.gz
+- docker-images/paasta-registry.tar.gz
+- docker-images/container-service-api.tar.gz
+- docker-images/container-service-common-api.tar.gz
+- docker-images/container-service-dashboard.tar.gz
