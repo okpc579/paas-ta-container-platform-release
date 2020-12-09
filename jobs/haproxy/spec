@@ -23,10 +23,6 @@ consumes:
     type: caas-mariadb
   - name: private-image-repository-link
     type: private-image-repository
-  - name: caas-jenkins-broker-link
-    type: caas-jenkins-broker
-  - name: caas-service-broker-link
-    type: caas-service-broker
 
 properties:
   pubic_ip:

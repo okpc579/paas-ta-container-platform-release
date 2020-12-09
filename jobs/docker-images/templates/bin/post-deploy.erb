@@ -8,6 +8,17 @@ echo "docker images load..jenkins"
 echo "docker images load..registry"
 /var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock load -i /var/vcap/packages/docker-images/paasta-registry.tar.gz
 
+echo "docker images load..container-platform-api"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock load -i /var/vcap/packages/docker-images/container-platform-api.tar.gz
+
+echo "docker images load..container-platform-common-api"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock load -i /var/vcap/packages/docker-images/container-platform-common-api.tar.gz
+
+echo "docker images load..container-platform-webuser"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock load -i /var/vcap/packages/docker-images/container-platform-webuser.tar.gz
+
+echo "docker images load..container-platform-webadmin"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock load -i /var/vcap/packages/docker-images/container-platform-webadmin.tar.gz
 
 jenkins_id=$(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images --filter=reference=<%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/paasta_jenkins:latest --format "{{.ID}}")
 
@@ -23,6 +34,33 @@ if [ -z "$registry_id" ]; then
     /var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock tag  $(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images | grep registry | awk '{print $3}')  <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/registry:latest
 fi
 
+cpapi_id=$(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images --filter=reference=<%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-api:latest --format "{{.ID}}")
+
+if [ -z "$cpapi_id" ]; then
+echo "docker images Change repositories and tags...container-platform-api"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock tag  $(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images | grep container-platform-api | awk '{print $3}') <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-api:latest
+fi
+
+cpcommonapi_id=$(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images --filter=reference=<%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-common-api:latest --format "{{.ID}}")
+
+if [ -z "$cpcommonapi_id" ]; then
+echo "docker images Change repositories and tags...container-platform-common-api"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock tag  $(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images | grep container-platform-common-api | awk '{print $3}') <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-common-api:latest
+fi
+
+cpwebadmin_id=$(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images --filter=reference=<%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-webadmin:latest --format "{{.ID}}")
+
+if [ -z "$cpwebadmin_id" ]; then
+echo "docker images Change repositories and tags...container-platform-webadmin"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock tag  $(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images | grep container-platform-webadmin | awk '{print $3}') <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-webadmin:latest
+fi
+
+cpwebuser_id=$(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images --filter=reference=<%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-webuser:latest --format "{{.ID}}")
+
+if [ -z "$cpwebuser_id" ]; then
+echo "docker images Change repositories and tags...container-platform-webuser"
+/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock tag  $(/var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock images | grep container-platform-webuser | awk '{print $3}') <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-webuser:latest
+fi
 
 echo "daemon.json create"
 cat > daemon.json << EOF
@@ -54,6 +92,18 @@ do
 
     echo "Register the docker image in the private docker repository...registry"
     /var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock push <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/registry:latest
+
+    echo "Register the docker image in the private docker repository...container-platform-api"
+    /var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock push <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-api:latest
+
+    echo "Register the docker image in the private docker repository...container-platform-common-api"
+    /var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock push <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-common-api:latest
+
+    echo "Register the docker image in the private docker repository...container-platform-webadmin"
+    /var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock push <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-webadmin:latest
+
+    echo "Register the docker image in the private docker repository...container-platform-webuser"
+    /var/vcap/packages/docker/bin/docker --host unix:///var/vcap/sys/run/docker/docker.sock push <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>/container-platform-webuser:latest
 
     echo "Success"
     exit 0

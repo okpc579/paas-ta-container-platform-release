@@ -26,8 +26,8 @@ provides:
   - role_set.init_user_code
 
 consumes:
-  - name: caas-jenkins-broker-link
-    type: caas-jenkins-broker
+  - name: private-image-repository-link
+    type: private-image-repository
 
 properties:
   port:
@@ -49,3 +49,9 @@ properties:
     description: 'Init user role set code name'
   role_set.init_user_code:
     description: 'Init user role set code'
+  k8s_api_server_ip:
+    description: ''
+  k8s_api_server_port:
+    description: ''
+  k8s_auth_bearer:
+    description: ''

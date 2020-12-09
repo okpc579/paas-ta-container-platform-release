@@ -21,6 +21,9 @@ provides:
    - image_repository.auth.username
    - image_repository.auth.password
    - image_repository.auth.password_string
+   - image_repository.registry.url
+   - image_repository.registry.name
+   - image_repository.registry.version
 
 
 properties:
@@ -48,3 +51,11 @@ properties:
   image_repository.auth.password_string:
     description: 'Authentication Password (string)'
     default: "admin"
+  image_repository.registry.url:
+    description:
+  image_repository.registry.name:
+    description:
+    default: "registry"
+  image_repository.registry.version:
+    description:
+    default: "latest"

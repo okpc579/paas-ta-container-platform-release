@@ -32,22 +32,3 @@ backend private_image_repository_servers
     mode tcp
     server server-0 <%= link('private-image-repository-link').instances[0].address%>:<%= link('private-image-repository-link').p('image_repository.port') %>
 
-### CaaS Jenkins Broker
-frontend http-in-caas_jenkins_broker
-    mode http
-    bind *:<%= link('caas-jenkins-broker-link').p('server.port') %>
-    default_backend caas_jenkins_broker_servers
-
-backend caas_jenkins_broker_servers
-    mode http
-    server server-0 <%= link('caas-jenkins-broker-link').instances[0].address%>:<%= link('caas-jenkins-broker-link').p('server.port') %>
-
-### CaaS Service Broker
-frontend http-in-caas_service_broker
-    mode http
-    bind *:<%= link('caas-service-broker-link').p('server.port') %>
-    default_backend caas_service_broker_servers
-
-    backend caas_service_broker_servers
-    mode http
-    server server-0 <%= link('caas-service-broker-link').instances[0].address%>:<%= link('caas-service-broker-link').p('server.port') %>
