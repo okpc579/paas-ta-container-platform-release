@@ -78,5 +78,5 @@
     $ bosh -e <bosh_name> create-release --name=paasta-container-platform-release --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
     ```   
 ### Deployment   
-- https://github.com/PaaS-TA/paas-ta-container-platform-deployment/tree/dev/install-guide/bosh
+- https://github.com/PaaS-TA/paas-ta-container-platform/tree/dev/install-guide/bosh
 
