@@ -80,3 +80,6 @@
 ### Deployment   
 - https://github.com/PaaS-TA/paas-ta-container-platform-deployment/tree/dev
 
+## License
+paas-ta-container-platform-release는 [Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용합니다.
+
