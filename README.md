@@ -1,6 +1,6 @@
 # paas-ta-container-platform-release
 ## 소개
-쿠버네티스 기반의 컨테이너 오케스트레이션 플랫폼의 단독 배포 및 엣지 클라우드 배포 기능을 구현하여 클라우드 기반의 서비스 및 운영에 필요한 부가 서비스를 제공합니다.
+ContainerPlatform을 위해 Bosh Release만 배포되어 배포된 쿠버네티스 클러스터에 신규 개발된 API를 Container에 올려 서비스 하기 위한 release 파일 입니다.
 
 ### PaaS-TA Container Platform Release Configuration
 [공통]
