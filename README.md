@@ -1,6 +1,6 @@
 # paas-ta-container-platform-release
 ## 소개
-PaaS-TA를 통해 서비스형태로 배포되는 CaaS 형태의 단독배포로 Kuberspray로 배포된 쿠버네티스 클러스터에 CaaS API를 Container에 올려서 서비스하는데 필요한 release 파일 입니다. 
+PaaS-TA를 통해 서비스형태로 배포되는 CaaS 형태의 단독배포로 배포된 쿠버네티스 클러스터에 CaaS API를 Container에 올려 서비스 하기 위한 release 파일 입니다. 
 
 ### PaaS-TA Container Platform Release Configuration
 [공통]
