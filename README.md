@@ -1,6 +1,6 @@
 # paas-ta-container-platform-release
 ## 소개
-쿠버네티스 기반의 컨테이너 오케스트레이션 플랫폼의 단독 배포 및 엣지 클라우드 배포 기능을 구현하여 클라우드 기반의 서비스 및 운영에 필요한 부가 서비스를 제공합니다.
+PaaS-TA를 통해 서비스형태로 배포되는 CaaS 형태의 단독배포로 Kuberspray로 배포된 쿠버네티스 클러스터에 CaaS API를 Container에 올려서 서비스하는데 필요한 release 파일 입니다. 
 
 ### PaaS-TA Container Platform Release Configuration
 [공통]
