@@ -2,12 +2,14 @@
 ## 소개
 Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위해 Bosh2.0을 이용하여 Container Platform Release를 생성하는 방법을 기술하였습니다.
 
+<br>
+
 ### PaaS-TA Container Platform Release Configuration
   - mariadb :: 1 machine
   - haproxy :: 1 machine
   - private-image-repository :: 1 machine
 
-<br>
+
 
 ### Create PaaS-TA Container Platform Release  
   - Download the PaaS-TA Container Platform Release
@@ -53,6 +55,9 @@ Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위�
     ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/paasta-marketplace-env-release-<VERSION>.tgz)        
     $ bosh -e <bosh_name> create-release --name=paasta-container-platform-release --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
     ```   
+
+<br>
+
 ### Deployment   
 - https://github.com/PaaS-TA/paas-ta-container-platform-deployment/tree/dev
 
