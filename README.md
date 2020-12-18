@@ -34,10 +34,10 @@ ContainerPlatform을 위해 Bosh Release만 배포되어 배포된 쿠버네티�
     - 단독 배포인 경우
     ```
     ## download source files   
-    $    
+    $ wget --content-disposition http://45.248.73.44/index.php/s/6YskYkM2RHHaexF/download   
     
     ## unzip download source files   
-    $   
+    $ unzip paasta-container-platform-release-src.zip  
     
     ## final src directory   
     src
@@ -53,10 +53,10 @@ ContainerPlatform을 위해 Bosh Release만 배포되어 배포된 쿠버네티�
     - 서비스 배포인 경우
     ```
     ## download source files   
-    $    
+    $ wget --content-disposition http://45.248.73.44/index.php/s/otZGzYZPP5yTj6p/download   
     
     ## unzip download source files   
-    $   
+    $ unzip paasta-container-platform-release-svc-src.zip  
     
     ## final src directory   
     src
