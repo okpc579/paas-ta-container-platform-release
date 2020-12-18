@@ -21,10 +21,10 @@ PaaS-TA를 통해 서비스형태로 배포되는 CaaS 형태의 단독배포로
   - Download & Copy "source files" into the src directory    
     ```
     ## download source files   
-    $    
+    $ wget --content-disposition http://45.248.73.44/index.php/s/otZGzYZPP5yTj6p/download   
     
     ## unzip download source files   
-    $   
+    $ unzip paasta-container-platform-release-svc-src.zip  
     
     ## final src directory   
     src
