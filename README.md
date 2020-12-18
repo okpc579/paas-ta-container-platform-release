@@ -29,10 +29,19 @@ Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위�
     
     ## final src directory   
     src
+        ├── docker-images
+        |   ├── container-platform-api.tar.gz
+        │   ├── container-platform-common-api.tar.gz
+        │   ├── container-platform-webadmin.tar.gz
+        │   ├── container-platform-webuser.tar.gz
+        │   ├── paasta-jenkins.tar.gz
+        │   └── paasta-registry.tar.gz
+        ├── java
+        │   └── server-jre-8u121-linux-x64.tar.gz
         ├── mariadb   
-        │   ├── mariadb-10.5.5-linux-x86_64.tar.gz
+        │   └── mariadb-10.5.5-linux-x86_64.tar.gz
         ├── haproxy   
-        │   ├── haproxy-1.6.5.tar.gz
+        │   └── haproxy-1.6.5.tar.gz
         └── private-image-repository
             ├── dbus_1.10.6-1ubuntu3_amd64.deb
             ├── docker-registry_2.6.2~ds1-1_amd64.deb
