@@ -1,9 +1,10 @@
 # paas-ta-container-platform-release
 ## 소개
-PaaS-TA를 통해 서비스형태로 배포되는 CaaS 형태의 단독배포로 배포된 쿠버네티스 클러스터에 CaaS API를 Container에 올려 서비스 하기 위한 release 파일 입니다. 
+PaaS-TA를 통해 서비스 형태로 배포되는 Container Platform의 단독배포로 배포된 쿠버네티스 클러스터에 CaaS API를 Container에 올려 서비스 하기 위한 release 파일 입니다. 
+
+<br>
 
 ### PaaS-TA Container Platform Release Configuration
-[공통]
   - mariadb :: 1 machine
   - haproxy :: 1 machine
   - private-image-repository :: 1 machine
@@ -24,27 +25,53 @@ PaaS-TA를 통해 서비스형태로 배포되는 CaaS 형태의 단독배포로
     $ wget --content-disposition http://45.248.73.44/index.php/s/otZGzYZPP5yTj6p/download   
     
     ## unzip download source files   
-    $ unzip paasta-container-platform-release-svc-src.zip  
+    $ unzip paasta-container-platform-release-svc-src.zip
     
     ## final src directory   
     src
         ├── container-jenkins-broker  
-        │   ├── 
+        │   └── paas-ta-caas-jenkins-broker.jar.gz
         ├── container-service-broker  
-        │   ├── 
+        │   ├── bosh.gz
+        │   ├── credhub.gz
+        │   ├── kubectl.gz
+        │   └── paas-ta-caas-broker.jar.gz
+        ├── docker-images
+        |   ├── container-platform-api.tar.gz
+        │   ├── container-platform-common-api.tar.gz
+        │   ├── container-platform-webadmin.tar.gz
+        │   ├── container-platform-webuser.tar.gz
+        │   ├── paasta-jenkins.tar.gz
+        │   └── paasta-registry.tar.gz
+        ├── java
+        │   └── server-jre-8u121-linux-x64.tar.gz
         ├── mariadb   
-        │   ├── 
+        │   └── mariadb-10.5.5-linux-x86_64.tar.gz
         ├── haproxy   
-        │   ├── 
-        ├── private-image-repository
-            └── 
+        │   └── haproxy-1.6.5.tar.gz
+        └── private-image-repository
+            ├── dbus_1.10.6-1ubuntu3_amd64.deb
+            ├── docker-registry_2.6.2~ds1-1_amd64.deb
+            ├── libcgmanager0_0.39-2ubuntu5_amd64.deb
+            ├── libdbus-1-3_1.10.6-1ubuntu3_amd64.deb
+            ├── libdrm2_2.4.67-1_amd64.deb
+            ├── libnih-dbus1_1.0.3-4.3ubuntu1_amd64.deb
+            ├── libplymouth4_0.9.2-3ubuntu13_amd64.deb
+            ├── libsystemd-login0_204-5ubuntu20.28_amd64.deb
+            ├── lsb-base_4.1+Debian11ubuntu7_all.deb
+            ├── mountall_2.54ubuntu1_amd64.deb
+            ├── plymouth_0.9.2-3ubuntu13_amd64.deb
+            └── upstart_1.13.2-0ubuntu21_amd64.deb
     ```
   - Create PaaS-TA Container Platform Release   
     ```
     ## <VERSION> :: release version (e.g. 1.0.1)     
     ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/paasta-marketplace-env-release-<VERSION>.tgz) 
     $ bosh -e <bosh_name> create-release --name=paasta-container-platform-release --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
-    ```   
+    ```
+
+<br>
+    
 ### Deployment   
 - https://github.com/PaaS-TA/paas-ta-container-platform-deployment/tree/dev
 
