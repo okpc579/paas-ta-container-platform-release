@@ -16,7 +16,6 @@ Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위�
     ```
     $ git clone -b dev https://github.com/PaaS-TA/paas-ta-container-platform-release.git
     $ cd paas-ta-container-platform-release
-    $ mkdir src
     ```
     
   - Download & Copy "source files" into the src directory
