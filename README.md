@@ -18,7 +18,7 @@ Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위�
     $ cd paas-ta-container-platform-release
     ```
     
-  - Download & Copy "source files" into the src directory
+  - Creating src directory and Download "source files" 
     ```
     ## download source files   
     $ wget --content-disposition http://45.248.73.44/index.php/s/6YskYkM2RHHaexF/download   
