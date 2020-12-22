@@ -2,9 +2,7 @@
 ## 소개
 PaaS-TA를 통해 서비스 형태로 배포되는 Container Platform의 단독배포로 배포된 쿠버네티스 클러스터에 CaaS API를 Container에 올려 서비스 하기 위한 release 파일 입니다. 
 
-<br>
-
-### 릴리즈 환 설정
+### 릴리즈 환경 설정
   - mariadb :: 1 machine
   - haproxy :: 1 machine
   - private-image-repository :: 1 machine
