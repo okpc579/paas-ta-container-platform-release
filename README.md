@@ -1,24 +1,24 @@
-# paas-ta-container-platform-release
+# PaaS-TA 컨테이너 플랫폼 RELEASE
 ## 소개
 Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위해 Bosh2.0을 이용하여 Container Platform Release를 생성하는 방법을 기술하였습니다.
 
 <br>
 
-### PaaS-TA Container Platform Release Configuration
+### 릴리즈 환경설정
   - mariadb :: 1 machine
   - haproxy :: 1 machine
   - private-image-repository :: 1 machine
 
 
 
-### Create PaaS-TA Container Platform Release  
-  - Download the PaaS-TA Container Platform Release
+### 릴리즈 생성  
+  - PaaS-TA 컨테이너 플랫폼 릴리즈를 다운로드 합니다.    
     ```
     $ git clone -b dev https://github.com/PaaS-TA/paas-ta-container-platform-release.git
     $ cd paas-ta-container-platform-release
     ```
     
-  - Creating src directory and Download "source files" 
+  - 다운로드 받은 source file을 src 디렉토리에 복사합니다. 
     ```
     ## download source files   
     $ wget --content-disposition http://45.248.73.44/index.php/s/6YskYkM2RHHaexF/download   
@@ -57,7 +57,7 @@ Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위�
     ```
     <br>
     
-  - Create PaaS-TA Container Platform Release   
+  - PaaS-TA 컨테이너 플랫폼 릴리즈를 생성합니다.    
     ```
     ## <VERSION> :: release version (e.g. 1.0.1)   
     ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/paasta-marketplace-env-release-<VERSION>.tgz)        
@@ -66,8 +66,8 @@ Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위�
 
 <br>
 
-### Deployment   
-- https://github.com/PaaS-TA/paas-ta-container-platform-deployment/tree/dev
+## 메인
+- https://github.com/PaaS-TA/paas-ta-container-platform/tree/dev
 
 ## License
 paas-ta-container-platform-release는 [Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용합니다.
