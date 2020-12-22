@@ -4,7 +4,7 @@ PaaS-TA를 통해 서비스 형태로 배포되는 Container Platform의 단독�
 
 <br>
 
-### 릴리즈 설정
+### 릴리즈 환 설정
   - mariadb :: 1 machine
   - haproxy :: 1 machine
   - private-image-repository :: 1 machine
