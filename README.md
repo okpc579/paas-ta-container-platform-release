@@ -59,8 +59,8 @@ Container Platform 사용을 위해 필요한 제반 환경을 구축하기 위�
     
   - PaaS-TA 컨테이너 플랫폼 릴리즈를 생성합니다.    
     ```
-    ## <VERSION> :: release version (e.g. 1.0.1)   
-    ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/paasta-marketplace-env-release-<VERSION>.tgz)        
+    ## <VERSION> :: release version   
+    ## <RELEASE_TARBALL_PATH> :: release file path     
     $ bosh -e <bosh_name> create-release --name=paasta-container-platform-release --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
     ```   
 
