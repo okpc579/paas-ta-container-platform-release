@@ -75,5 +75,5 @@ PaaS-TA를 통해 서비스 형태로 배포되는 Container Platform의 단독�
 - https://github.com/PaaS-TA/paas-ta-container-platform/tree/dev
 
 ## 라이선스
-paas-ta-container-platform-release는 [Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용합니다.
+[Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용합니다.
 
