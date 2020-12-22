@@ -16,8 +16,7 @@ PaaS-TA를 통해 서비스 형태로 배포되는 Container Platform의 단독�
     $ cd paas-ta-container-platform-release
     $ mkdir src
     ```  
-    
-  -   
+         
   - 다운로드 받은 source files를 src 디렉토리에 복사합니다.
     ```
     ## download source files   
