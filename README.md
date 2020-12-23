@@ -17,7 +17,7 @@ Container-Platform을 위한 Back-end Service와 서비스 브로커를 한번�
     $ mkdir src
     ```  
          
-  - 다운로드 받은 source files를 src 디렉토리에 복사합니다.
+  - 다운로드 받은 source file src 디렉토리에 복사합니다.
     ```
     ## download source files   
     $ wget --content-disposition http://45.248.73.44/index.php/s/otZGzYZPP5yTj6p/download   
