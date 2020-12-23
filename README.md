@@ -1,6 +1,6 @@
-# PaaS-TA 컨테이너 플랫폼 RELEASE
+# PaaS-TA 컨테이너 플랫폼 CaaS RELEASE 
 ## 소개
-Container-Platform을 위한 Back-end Service와 서비스 브로커를 한번에 설치 할 수 있도록 구성해 놓은 Release 서비스를 말합니다. 릴리즈를 다운로드하고 생성하는 방법에 대해 기술하였습니다.
+컨테이너 플랫폼을 위한 Back-end Service와 서비스 브로커를 한번에 설치 할 수 있도록 구성해 놓은 릴리즈 서비스를 말합니다. 릴리즈를 다운로드하고 생성하는 방법에 대해 기술하였습니다.
 
 ### 릴리즈 환경 설정
   - mariadb :: 1 machine
