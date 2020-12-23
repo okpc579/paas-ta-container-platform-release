@@ -1,6 +1,6 @@
 # PaaS-TA 컨테이너 플랫폼 RELEASE
 ## 소개
-Container Platform 사용을 위한 필요한 제반 환경을 구축하기 위해 Bosh2.0을 이용하여 Container Platform Release를 생성하는 방법을 기술하였습니다.
+Container-Platform을 위한 Back-end Service를 한번에 설치 할 수 있도록 구성해 놓은 Bosh Release를 말합니다. 릴리즈를 다운로드하고 생성하는 방법에 대해 기술하였습니다.
 
 ### 릴리즈 환경설정
   - mariadb :: 1 machine
