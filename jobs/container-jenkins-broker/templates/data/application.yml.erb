@@ -52,5 +52,5 @@ jenkins:
   namespace: "<%= p('jenkins.namespace')%>"
   secret_file_path: "<%= p('jenkins.secret_file_path')%>"
   username: "admin"
-  password: "cloudfoundry"
-  docker_repository_url: <%= link('private-image-repository-link').instances[0].address %>:<%= link('private-image-repository-link').p('image_repository.port') %>
+  password: "admin"
+  docker_repository_url: <%= link('private-image-repository-link').p('image_repository.registry.url') %>:<%= link('private-image-repository-link').p('image_repository.port') %>
