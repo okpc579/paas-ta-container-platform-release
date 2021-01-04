@@ -53,4 +53,4 @@ jenkins:
   secret_file_path: "<%= p('jenkins.secret_file_path')%>"
   username: "admin"
   password: "admin"
-  docker_repository_url: <%= link('private-image-repository-link').p('image_repository.registry.url') %>:<%= link('private-image-repository-link').p('image_repository.port') %>
+  docker_repository_url: <%= link('caas-haproxy-link').p('public_ip') %>:<%= link('private-image-repository-link').p('image_repository.port') %>
