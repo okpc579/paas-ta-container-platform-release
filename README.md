@@ -13,8 +13,7 @@
   - PaaS-TA 컨테이너 플랫폼 릴리즈를 다운로드 합니다.    
     ```
     $ git clone -b caas-dev https://github.com/PaaS-TA/paas-ta-container-platform-release.git
-    $ cd paas-ta-container-platform-release
-    $ mkdir src
+    $ cd paas-ta-container-platform-release    
     ```  
          
   - 다운로드 받은 source file을 src 디렉토리에 복사합니다. 
@@ -35,12 +34,11 @@
         │   ├── kubectl.gz
         │   └── paas-ta-caas-broker.jar.gz
         ├── docker-images
-        |   ├── container-platform-api.tar.gz
-        │   ├── container-platform-common-api.tar.gz
-        │   ├── container-platform-webadmin.tar.gz
-        │   ├── container-platform-webuser.tar.gz
-        │   ├── paasta-jenkins.tar.gz
-        │   └── paasta-registry.tar.gz
+        │   ├── container-service-api.tar.gz
+        │   ├── container-service-common-api.tar.gz
+        │   ├── container-service-dashboard.tar.gz
+        │   ├── paasta-jenkins.tar.gz
+        │   └── paasta-registry.tar.gz
         ├── java
         │   └── server-jre-8u121-linux-x64.tar.gz
         ├── mariadb   
