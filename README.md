@@ -17,46 +17,40 @@
   - 다운로드 받은 source file을 src 디렉토리에 복사합니다. 
     ```
     ## download source files   
-    $ wget --content-disposition http://45.248.73.44/index.php/s/6YskYkM2RHHaexF/download   
-    
+    $ wget --content-disposition http://45.248.73.44/index.php/s/eHkSZf7eE8bkZTf/download
+
     ## unzip download source files   
-    $ unzip paasta-container-platform-release-src.zip  
+    $ mkdir src
+    $ tar -zxvf paasta-container-platform-src-1.0.tar.gz -C src  
     
     ## final src directory   
     src
-        ├── docker-images
-        |   ├── container-platform-api.tar.gz
-        │   ├── container-platform-common-api.tar.gz
-        │   ├── container-platform-webadmin.tar.gz
-        │   ├── container-platform-webuser.tar.gz
-        │   ├── paasta-jenkins.tar.gz
-        │   └── paasta-registry.tar.gz
-        ├── java
-        │   └── server-jre-8u121-linux-x64.tar.gz
-        ├── mariadb   
-        │   └── mariadb-10.5.5-linux-x86_64.tar.gz
-        ├── haproxy   
-        │   └── haproxy-1.6.5.tar.gz
-        └── private-image-repository
-            ├── dbus_1.10.6-1ubuntu3_amd64.deb
-            ├── docker-registry_2.6.2~ds1-1_amd64.deb
-            ├── libcgmanager0_0.39-2ubuntu5_amd64.deb
-            ├── libdbus-1-3_1.10.6-1ubuntu3_amd64.deb
-            ├── libdrm2_2.4.67-1_amd64.deb
-            ├── libnih-dbus1_1.0.3-4.3ubuntu1_amd64.deb
-            ├── libplymouth4_0.9.2-3ubuntu13_amd64.deb
-            ├── libsystemd-login0_204-5ubuntu20.28_amd64.deb
-            ├── lsb-base_4.1+Debian11ubuntu7_all.deb
-            ├── mountall_2.54ubuntu1_amd64.deb
-            ├── plymouth_0.9.2-3ubuntu13_amd64.deb
-            └── upstart_1.13.2-0ubuntu21_amd64.deb
+    ├── haproxy
+    │   └── haproxy-1.6.5.tar.gz
+    ├── java
+    │   └── server-jre-8u121-linux-x64.tar.gz
+    ├── mariadb
+    │   └── mariadb-10.5.8-linux-systemd-x86_64.tar.gz
+    └── private-image-repository
+        ├── dbus_1.10.6-1ubuntu3_amd64.deb
+        ├── docker-registry_2.6.2~ds1-1_amd64.deb
+        ├── libcgmanager0_0.39-2ubuntu5_amd64.deb
+        ├── libdbus-1-3_1.10.6-1ubuntu3_amd64.deb
+        ├── libdrm2_2.4.67-1_amd64.deb
+        ├── libnih-dbus1_1.0.3-4.3ubuntu1_amd64.deb
+        ├── libplymouth4_0.9.2-3ubuntu13_amd64.deb
+        ├── libsystemd-login0_204-5ubuntu20.28_amd64.deb
+        ├── lsb-base_4.1+Debian11ubuntu7_all.deb
+        ├── mountall_2.54ubuntu1_amd64.deb
+        ├── plymouth_0.9.2-3ubuntu13_amd64.deb
+        └── upstart_1.13.2-0ubuntu21_amd64.deb
     ```
     <br>
     
   - PaaS-TA 컨테이너 플랫폼 릴리즈를 생성합니다.    
     ```
-    ## <VERSION> :: release version   
-    ## <RELEASE_TARBALL_PATH> :: release file path     
+    ## <VERSION> :: release version (ex : 1.0)  
+    ## <RELEASE_TARBALL_PATH> :: release file path (paasta-container-platform-1.0.tgz)     
     $ bosh -e <bosh_name> create-release --name=paasta-container-platform-release --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
     ```   
 
