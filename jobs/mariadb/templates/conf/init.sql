@@ -1,5 +1,5 @@
 /*
-MySQL - 10.1.22-MariaDB : Database - CaaS broker & dashboard
+MySQL - 10.5.8-MariaDB : Database - CaaS broker & dashboard & webUser & webAdmin
 *********************************************************************
 */
 

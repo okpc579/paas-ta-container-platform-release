@@ -24,8 +24,15 @@ log-error = /var/vcap/sys/log/mariadb/mariadb-error.log
 pid-file = /var/vcap/sys/run/mysqld.pid
 character_set_server = utf8
 max_allowed_packet = 32M
+# max_connection = 300
+# max_connect_errors = 10000
 general_log = 1
 general_log_file = /var/vcap/sys/log/mariadb/mariadb-general.log
+
+slow_query_log = 1
+slow_query_log_file = /var/vcap/sys/log/mariadb/mariadb-slow-query.log
+plugin_dir = /var/vcap/store/mariadb/lib/plugin
+plugin_load_add = ed25519=auth_ed25519
 
 # Remove leading # to set options mainly useful for reporting servers.
 # The server defaults are faster for transactions and fast SELECTs.

@@ -32,7 +32,7 @@ consumes:
 properties:
   port:
     description: 'MariaDB server port'
-    default: '3306'
+    default: '13306'
   admin_user.id:
     description: 'MariaDB admin user id'
   admin_user.password:
@@ -49,9 +49,5 @@ properties:
     description: 'Init user role set code name'
   role_set.init_user_code:
     description: 'Init user role set code'
-  k8s_api_server_ip:
-    description: ''
-  k8s_api_server_port:
-    description: ''
   k8s_auth_bearer:
-    description: ''
+    description:
