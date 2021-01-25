@@ -1,6 +1,3 @@
-GRANT ALL PRIVILEGES ON *.* TO '<%= p("admin_user.id") %>'@'%' IDENTIFIED BY '<%= p("admin_user.password") %>' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-
 /*
 MySQL - 10.1.22-MariaDB : Database - CaaS broker & dashboard
 *********************************************************************
