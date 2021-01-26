@@ -45,16 +45,13 @@
         ├── plymouth_0.9.2-3ubuntu13_amd64.deb
         └── upstart_1.13.2-0ubuntu21_amd64.deb
     ```
-    <br>
-    
+   
   - PaaS-TA 컨테이너 플랫폼 릴리즈를 생성합니다.    
     ```
     ## <VERSION> :: release version (ex : 1.0)  
-    ## <RELEASE_TARBALL_PATH> :: release file path (ex : paasta-container-platform-1.0.tgz)     
+    ## <RELEASE_TARBALL_PATH> :: release file path (ex : ./paasta-container-platform-1.0.tgz)     
     $ bosh -e <bosh_name> create-release --name=paasta-container-platform-release --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force   
     ```   
-
-<br>
 
 ## 메인
 - https://github.com/PaaS-TA/paas-ta-container-platform/tree/dev
