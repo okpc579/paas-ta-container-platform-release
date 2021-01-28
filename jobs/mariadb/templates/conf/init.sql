@@ -240,6 +240,10 @@ INSERT INTO `caas`.`caas_user_role_set`(`role_set_code`, `resource_code`, `verb_
 INSERT INTO `caas`.`caas_user_role_set`(`role_set_code`, `resource_code`, `verb_code`, `description`, `created`) VALUES ('<%= p("role_set.regular_user_code") %>', 'user_management', 'list', '', now());
 INSERT INTO `caas`.`caas_user_role_set`(`role_set_code`, `resource_code`, `verb_code`, `description`, `created`) VALUES ('<%= p("role_set.regular_user_code") %>', 'user_management', 'watch', '', now());
 
-
+INSERT INTO `caas`.`caas_user_role_set`(`role_set_code`, `resource_code`, `verb_code`, `description`, `created`) VALUES ('<%= p("role_set.init_user_code") %>', 'user_management', 'get', '', now());
+INSERT INTO `caas`.`caas_user_role_set`(`role_set_code`, `resource_code`, `verb_code`, `description`, `created`) VALUES ('<%= p("role_set.init_user_code") %>', 'user_management', 'list', '', now());
+INSERT INTO `caas`.`caas_user_role_set`(`role_set_code`, `resource_code`, `verb_code`, `description`, `created`) VALUES ('<%= p("role_set.init_user_code") %>', 'user_management', 'watch', '', now());
+                                                                                                                         
+                                                                                                                         
 SET FOREIGN_KEY_CHECKS = 1;
 
