@@ -1,6 +1,6 @@
 # PaaS-TA 컨테이너 플랫폼 RELEASE
 ## 소개
-컨테이너 플랫폼을 위한 Back-end Service를 한번에 설치 할 수 있도록 구성해 놓은 Bosh 릴리즈를 말합니다. 릴리즈를 다운로드하고 생성하는 방법에 대해 기술하였습니다.
+컨테이너 플랫폼을 위한 Back-end Service를 한번에 설치 할 수 있도록 구성해 놓은 Bosh 릴리즈를 말한다. 릴리즈를 다운로드하고 생성하는 방법에 대해 기술하였다.
 
 ### 릴리즈 환경설정
   - mariadb :: 1 machine
@@ -8,13 +8,13 @@
   - private-image-repository :: 1 machine
 
 ### 릴리즈 생성  
-  - PaaS-TA 컨테이너 플랫폼 릴리즈를 다운로드 합니다.    
+  - PaaS-TA 컨테이너 플랫폼 릴리즈를 다운로드 한다.    
     ```
     $ git clone -b dev https://github.com/PaaS-TA/paas-ta-container-platform-release.git
     $ cd paas-ta-container-platform-release
     ```
     
-  - 다운로드 받은 source file을 src 디렉토리에 복사합니다. 
+  - 다운로드 받은 source file을 src 디렉토리에 복사한다. 
     ```
     ## download source files   
     $ wget --content-disposition http://45.248.73.44/index.php/s/eHkSZf7eE8bkZTf/download
@@ -46,7 +46,7 @@
         └── upstart_1.13.2-0ubuntu21_amd64.deb
     ```
    
-  - PaaS-TA 컨테이너 플랫폼 릴리즈를 생성합니다.    
+  - PaaS-TA 컨테이너 플랫폼 릴리즈를 생성한다.    
     ```
     ## <VERSION> :: release version (ex : 1.0)  
     ## <RELEASE_TARBALL_PATH> :: release file path (ex : ./paasta-container-platform-1.0.tgz)         
@@ -57,5 +57,5 @@
 - https://github.com/PaaS-TA/paas-ta-container-platform/tree/dev
 
 ## 라이선스 
-[Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용합니다.
+[Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용한다.
 
