@@ -54,7 +54,7 @@
     ```   
 
 ## 메인
-- https://github.com/PaaS-TA/paas-ta-container-platform/tree/dev
+- [PaaS-TA 컨테이너 플랫폼](https://github.com/PaaS-TA/paas-ta-container-platform)
 
 ## 라이선스 
 [Apache-2.0 License](http://www.apache.org/licenses/LICENSE-2.0)를 사용한다.
