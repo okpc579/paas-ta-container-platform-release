@@ -10,7 +10,7 @@
 ### 릴리즈 생성  
   - PaaS-TA 컨테이너 플랫폼 릴리즈를 다운로드 한다.    
     ```
-    $ git clone -b dev https://github.com/PaaS-TA/paas-ta-container-platform-release.git
+    $ git clone https://github.com/PaaS-TA/paas-ta-container-platform-release.git
     $ cd paas-ta-container-platform-release
     ```
     
