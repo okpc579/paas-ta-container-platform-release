@@ -17,7 +17,7 @@
   - 다운로드 받은 source file을 src 디렉토리에 복사한다. 
     ```
     ## download source files   
-    $ wget --content-disposition http://45.248.73.44/index.php/s/eHkSZf7eE8bkZTf/download
+    $ wget --content-disposition https://nextcloud.paas-ta.org/index.php/s/eHkSZf7eE8bkZTf/download
 
     ## unzip download source files   
     $ mkdir src
