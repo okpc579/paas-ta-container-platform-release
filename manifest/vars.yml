@@ -12,7 +12,7 @@ stemcell_alias: "xenial"                                                        
 
 # NETWORK
 service_private_networks_name: "default"
-service_public_networks_name: "default"                                                 # public network name
+service_public_networks_name: "vip"                                                 # public network name (만약 floating ip를 사용하지 않는다면 default)
 
 # VM_TYPE
 vm_type: "small"                                                              # vm type small
