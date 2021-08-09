@@ -19,7 +19,7 @@ vm_type: "small"                                                              # 
 
 #PRIVATE IMAGE REPOSITORY
 private_image_repository_azs: [z7]                                                   # private image repository azs
-private_image_repository_port: 443                                                  # private image repository port (e.g. 5001)-- Do Not Use "5000"
+private_image_repository_port: 443                                                  # private image repository port
 private_image_repository_root_directory: "/var/vcap/data/private-image-repository"   # private image repository root directory
 private_image_repository_persistent_disk_type: "10GB"                                # private image repository's persistent disk type
 service_public_ip: "150.0.20.110"
