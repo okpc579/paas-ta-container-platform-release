@@ -31,6 +31,13 @@ stop_service () {
 start_service () {
   echo "Start image repository"
 
+  #sudo chown docker-registry /var/vcap/jobs/private-image-repository/conf/cert.crt
+  #sudo chown docker-registry /var/vcap/jobs/private-image-repository/conf/private_key.pem
+  cp /var/vcap/jobs/private-image-repository/conf/cert.crt /tmp/cert.crt
+  cp /var/vcap/jobs/private-image-repository/conf/private_key.pem /tmp/private_key.pem
+  sudo chown docker-registry /tmp/cert.crt
+  sudo chown docker-registry /tmp/private_key.pem
+
   stop_service
 
   sudo service $SERVICE_NAME start

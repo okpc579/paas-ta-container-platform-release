@@ -21,6 +21,10 @@ auth:
 <% end %>
 http:
     addr: :<%= p('image_repository.port') %>
+    host: https://<%= p('image_repository.ip') %>
+    tls:
+        certificate: /tmp/cert.crt
+        key: /tmp/private_key.pem
     headers:
         X-Content-Type-Options: [nosniff]
     http2:

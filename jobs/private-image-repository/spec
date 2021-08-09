@@ -9,6 +9,8 @@ templates:
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
   bin/pre-start : bin/pre-start
   bin/install-pkgs: bin/install-pkgs
+  conf/cert.erb: conf/cert.crt
+  conf/private_key.erb: conf/private_key.pem
 
 packages:
   - private-image-repository
@@ -24,6 +26,7 @@ provides:
    - image_repository.registry.url
    - image_repository.registry.name
    - image_repository.registry.version
+   - image_repository.ip
 
 
 properties:
@@ -59,3 +62,9 @@ properties:
   image_repository.registry.version:
     description:
     default: "latest"
+  image_repository.ip:
+    description:
+  image_repository.ssl_cert:
+    default: ''
+  image_repository.ssl_private_key:
+    default: ''

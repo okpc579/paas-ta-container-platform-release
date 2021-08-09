@@ -1,0 +1,76 @@
+---
+name: ((deployment_name))
+releases:
+- name: ((release_name))
+#  url: https://nextcloud.paas-ta.org/index.php/s/ggdZyEKejPSszFj/download
+  version: ((release_version))
+
+stemcells:
+- alias: ((stemcell_alias))
+  os: ((stemcell_os))
+  version: ((stemcell_version))
+
+###################
+
+
+instance_groups:
+- name: private-image-repository
+  instances: 1
+  networks:
+  - name: ((service_private_networks_name))
+    default: [dns, gateway]
+  - name: ((service_public_networks_name))
+    static_ips: [((service_public_ip))]
+  azs: ((private_image_repository_azs))
+  vm_type: ((vm_type))
+  stemcell: ((stemcell_alias))
+  persistent_disk_type: ((private_image_repository_persistent_disk_type))
+  update:
+    max_in_flight: 1
+    serial: true
+  jobs:
+  - name: private-image-repository
+    release: ((release_name))
+    instances: 1
+    properties:
+      image_repository:
+        port: ((private_image_repository_port))
+        ip: ((service_public_ip))
+        storage:
+          filesystem:
+            rootdirectory: ((private_image_repository_root_directory))
+          delete_enabled: true
+        http:
+          http2_disabled: false
+        auth:
+          enabled: true
+          username: "admin"
+        ssl_cert: "((image_repository_ssl.certificate))"
+        ssl_private_key: "((image_repository_ssl.private_key))"
+
+variables:
+- name: image_repository_ca
+  type: certificate
+  options:
+    is_ca: true
+    common_name: imagerepositoryCA
+- name: image_repository_ssl
+  type: certificate
+  options:
+    ca: image_repository_ca
+    common_name: ((service_public_ip))
+    alternative_names:
+    - ((service_public_ip))
+    - "*.((service_public_ip))"
+
+update:
+  canaries: 1
+  canary_watch_time: 10000-300000
+  max_in_flight: 1
+  update_watch_time: 10000-300000
+
+features:
+  use_dns_addresses: true
+
+features:
+  use_dns_addresses: true
